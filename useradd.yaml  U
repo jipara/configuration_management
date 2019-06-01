@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  -name: Add 1 user
+   user:
+     name:bob
+     state: present
+     became: sudo
+     became_method: sudo
