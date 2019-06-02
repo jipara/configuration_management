@@ -1,0 +1,12 @@
+---
+- name: Creates ec2 instance
+  hosts: localhost
+  tasks:
+    - name: Create instances
+      ec2:
+        key_name: awx key
+        instance_type: t2.micro
+        image: CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-05713873c6794f575.4 (ami-074e2d6769f445be5)
+        count: 3
+        vpc_subnet_id: subnet-2eb8bf75
+
