@@ -4,12 +4,12 @@
   become_method: sudo
   tasks:
     - name: update kernel to latest
-      when: ansilbe_distribution == "CentOS"
+      when: ansilbe_distribution == "Centos"
       package:
         name: kernel
         state: latest
       become: yes
       become_method: sudo
     - name: restart the system
-      when: ansilbe_distribution == "CentOS"
+      when: ansilbe_distribution == "Centos"
       reboot:
