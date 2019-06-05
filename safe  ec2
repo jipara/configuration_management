@@ -1,0 +1,8 @@
+ - name: Create instances
+      ec2:
+        key_name:        "awx new"
+        instance_type:    t2.micro
+        image: CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-05713873c6794f575.4 (ami-0f2b4fc905b0bd1f1)
+        count:           3
+        vpc_subnet_id: CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-05713873c6794f575.4 (ami-0f2b4fc905b0bd1f1)
+        region: us-east-2a
