@@ -12,7 +12,7 @@
           Name: CentOS7
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-62ba1d2e
+        vpc_subnet_id: subnet-0c1f6076
         assign_public_ip: yes
         key_name: awx key
 
@@ -39,7 +39,7 @@
           Name: Ubuntu-18.04
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-62ba1d2e
+        vpc_subnet_id: subnet-0c1f6076
         assign_public_ip: yes
         user_data: |
                    #!/bin/sh
@@ -58,7 +58,7 @@
           Name: Debian GNU-Linux 9
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-62ba1d2e
+        vpc_subnet_id: subnet-0c1f6076
         assign_public_ip: yes
         user_data: |
                    #!/bin/sh
@@ -66,7 +66,7 @@
                    sudo apt-get install boto -y
         key_name: axw key
 
-        
+
 - hosts:
   - localhost
 
