@@ -15,18 +15,7 @@
         vpc_subnet_id: subnet-0c1f6076
         assign_public_ip: yes
         key_name: awx new
-
-
-    - name: update kernel to latest 
-      when: ansible_distribution == "CentOS" 
-      package:
-        Name: kernel
-        state: latest
-
-    - name: restart the system
-      when: ansible_distribution == "CentOS"
-      reboot: 
-
+ 
 
 
 
