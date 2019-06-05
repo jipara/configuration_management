@@ -8,7 +8,8 @@
         package:
           name: kernel
           state: latest
+
       - name: Restart the system
         when: ansible_distribution == "CentOS"
-        
+        reboot:
 
