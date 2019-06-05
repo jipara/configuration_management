@@ -1,15 +1,13 @@
----  # This is used to update kernel on CentOS machine only and ignore both Debian & Ubuntu instances.
-  - hosts: localhost # This specifies the name of my hosts group name.
-    become: yes
-    become_method: sudo
-    tasks:           # Listed below are the tasks needed to be executed upon ansible playbook execution.
-      - name: update kernel to latest 
-        when: ansible_distribution == "CentOS" #and ansible_distribution_major_version == "7"
-        package:
-          name: kernel
-          state: latest
-
-      - name: Restart the system
-        when: ansible_distribution == "CentOS"
-        reboot:
+---
+- hosts: localhost
+  tasks:
+    - name: update kernel to latest
+      when: ansilbe_distribution == "CentOS" and ansible_distribution_major_version == "7"
+      package:
+        name: kernel
+        state: latest
+      become: yes
+      become_method: sudo
+    - name: Restart the system
+      reboot: 
 
