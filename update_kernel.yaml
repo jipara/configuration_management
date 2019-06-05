@@ -1,5 +1,5 @@
 ---  # This is used to update kernel on CentOS machine only and ignore both Debian & Ubuntu instances.
-  - hosts: web_server # This specifies the name of my hosts group name.
+  - hosts: localhost # This specifies the name of my hosts group name.
     become: yes
     become_method: sudo
     tasks:           # Listed below are the tasks needed to be executed upon ansible playbook execution.
