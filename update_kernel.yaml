@@ -10,4 +10,5 @@
           state: latest
       - name: Restart the system
         when: ansible_distribution == "CentOS"
-        reboot:
+        reboot: yes
+        
