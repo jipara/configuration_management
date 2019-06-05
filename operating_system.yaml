@@ -1,3 +1,4 @@
+---  
 - name: Provision Centos7
   hosts: localhost
   tasks:
@@ -41,7 +42,8 @@
         assign_public_ip: yes
         user_data: |
                    #!/bin/sh
-                   sudo apt-get install python -y
+                   sudo apt-get install python -y 
+                   sudo apt-get install boto -y
         key_name: aws key
 
 
@@ -60,4 +62,5 @@
         user_data: |
                    #!/bin/sh
                    sudo apt-get install python -y
+                   sudo apt-get install boto -y
         key_name: axw key
