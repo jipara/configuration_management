@@ -66,10 +66,3 @@
                    sudo apt-get install boto -y
         key_name: axw new
 
-
-- hosts:
-  - localhost
-
-  tasks:
-    - pip:
-        name: boto
