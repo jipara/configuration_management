@@ -2,6 +2,7 @@
 - name: Provision Centos7
   hosts: localhost
   tasks:
+
     - name: Launch CentOS7
       ec2:
         aws_region: us-east-2
@@ -64,3 +65,11 @@
                    sudo apt-get install python -y
                    sudo apt-get install boto -y
         key_name: axw key
+
+        
+- hosts:
+  - localhost
+
+  tasks:
+    - pip:
+        name: boto
