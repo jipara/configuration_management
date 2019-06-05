@@ -4,33 +4,45 @@
     - name: Launch CentOS7
       ec2:
         aws_region: us-east-2
-        image: ami-0f2b4fc905b0bd1f1
+        image: ami-0791c4a97b93a0141
         instance_type: t2.micro
         instance_tags:
           Name: CentOS7
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-0c1f6076
+        vpc_subnet_id: subnet-62ba1d2e
         assign_public_ip: yes
         key_name: awx key
 
 
+    - name: update kernel to latest 
+      when: ansible_distribution == "CentOS" 
+      package:
+        Name: kernel
+        state: latest
 
-    - name: Launch Ubuntu 18.04
+    - name: restart the system
+      when: ansible_distribution == "CentOS"
+      reboot: 
+
+
+
+
+    - name: Launch Ubuntu-18.04
       ec2:
         aws_region: us-east-2
-        image: ami-0f2057f28f0a44d06
+        image: ami-0c55b159cbfafe1f0
         instance_type: t2.micro
         instance_tags:
-          Name: Ubuntu-16.04
+          Name: Ubuntu-18.04
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-0c1f6076
+        vpc_subnet_id: subnet-62ba1d2e
         assign_public_ip: yes
         user_data: |
                    #!/bin/sh
-                    sudo apt-get install python -y
-        key_name: awx key
+                   sudo apt-get install python -y
+        key_name: aws key
 
 
 
@@ -43,9 +55,9 @@
           Name: Debian GNU-Linux 9
         count: 1
         wait: yes
-        vpc_subnet_id: subnet-0c1f6076
+        vpc_subnet_id: subnet-62ba1d2e
         assign_public_ip: yes
         user_data: |
                    #!/bin/sh
                    sudo apt-get install python -y
-        key_name: awx key
+        key_name: axw key
