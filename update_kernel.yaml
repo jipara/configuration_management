@@ -11,7 +11,7 @@
 
       - name: restart the system
         when: ansible_distribution == "CentOS"
-        reboot: 
+        
 
         
 
