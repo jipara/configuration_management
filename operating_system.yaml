@@ -14,7 +14,7 @@
         wait: yes
         vpc_subnet_id: subnet-0c1f6076
         assign_public_ip: yes
-        key_name: awx key
+        key_name: awx new
 
 
     - name: update kernel to latest 
@@ -45,7 +45,7 @@
                    #!/bin/sh
                    sudo apt-get install python -y 
                    sudo apt-get install boto -y
-        key_name: aws key
+        key_name: aws new
 
 
 
@@ -64,7 +64,7 @@
                    #!/bin/sh
                    sudo apt-get install python -y
                    sudo apt-get install boto -y
-        key_name: axw key
+        key_name: axw new
 
 
 - hosts:
