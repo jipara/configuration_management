@@ -1,0 +1,7 @@
+key_name:           "awx new"
+instance_type:      "t2.micro"
+image:              "ami-0de1e672ea5eab4cb"
+count:              "4"
+vpc_subnet_id:      "subnet-0c1f6076"
+region:             "us-east-2"
+
