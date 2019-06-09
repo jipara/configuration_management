@@ -3,7 +3,7 @@
     hosts: all
     tasks: 
       - name: install 1 package
-        service:
+        package:
          name: httpd
          state: present
         become: yes 
