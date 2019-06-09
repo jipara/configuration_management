@@ -1,6 +1,6 @@
 ---
 - name: Install r1soft agent
-  hosts: target
+  hosts: all
   become: yes
   become_method: sudo 
   tasks: 
@@ -14,7 +14,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT_INSTALLED_ON_CENTOS_7
 
       - name: Get key
@@ -32,7 +32,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT_INSTALLED_ON_CENTOS_6
     
       - name: Get key
@@ -55,7 +55,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT_INSTALLED_ON_CENTOS_8
 
     
@@ -75,7 +75,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
       
       - name: Start agent
         systemd:
