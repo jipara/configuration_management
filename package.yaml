@@ -6,5 +6,5 @@
         service:
          name: httpd
          state: present
-        became: yes 
-        became_method: sudo
+        become: yes 
+        become_method: sudo
