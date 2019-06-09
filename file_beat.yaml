@@ -6,12 +6,14 @@
   tasks:
     - block: 
       - name: Istall filebeat repo on centos 6
-        shell: "curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.1.1-x86_64.rpm"
+        package:
+          name: :  https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.1.1-x86_64.rpm"
       - name: Install from rpm
         shell: rpm -vi filebeat-7.1.1-x86_64.rpm
         notify: FIREBEAT_CENTOS_6
       when: ansible_distribution == "CentOS" and ansible_distribution == "6"
-      
+      ignore_errors: true
+
 
 
     - block: 
