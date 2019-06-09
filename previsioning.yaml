@@ -16,4 +16,4 @@
   import_playbook: nagiosxi_agent.yaml
 
 - name: Install filebeat
-  import_playbook: filebeat.yaml      
+  import_playbook: file_beat.yaml      
