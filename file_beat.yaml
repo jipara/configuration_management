@@ -10,7 +10,7 @@
       - name: Install from rpm
         shell: rpm -vi filebeat-7.1.1-x86_64.rpm
         notify: FIREBEAT_CENTOS_6
-      when: ansible_distribution =="CentOS" and ansible_distribution == "6"
+      when: ansible_distribution == "CentOS" and ansible_distribution == "6"
       
 
 
@@ -20,7 +20,7 @@
       - name: Install from rpm
         shell: rpm -vi filebeat-7.1.1-x86_64.rpm
         notify: FIREBEAT_CENTOS_7
-      when: ansible_distribution =="CentOS" and ansible_distribution == "7"
+      when: ansible_distribution == "CentOS" and ansible_distribution == "7"
       
   
   handlers: 
