@@ -1,3 +1,11 @@
-1`name:		"dev"
-cidr_block:	"10.0.0.0/16"
-region:		"us-east-2"
+---
+- name: Create an s3 bcuket
+  hosts: localhost 
+  vars_files:
+    - var_igw
+  tasks:
+    - name: Create internet gate way
+      ec2_vpc_igw:
+        vpc_id: "{{vpc_id}}"
+        state: present
+      register: igw

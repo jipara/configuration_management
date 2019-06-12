@@ -7,5 +7,6 @@
     - name: Create internet gate way
       ec2_vpc_igw:
         vpc_id: "{{vpc_id}}"
+        region: "{{region}}"
         state: present
       register: igw
