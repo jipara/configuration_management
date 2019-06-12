@@ -1,0 +1,10 @@
+---
+- name: Delete an s3 bucket
+  hosts: localhost 
+  vars_files:
+    - var_s3
+  tasks:
+    - name: Delete an s3 bucket
+      aws_s3:
+        bucket: "{{bucket}}"
+        mode: delete
