@@ -1,0 +1,8 @@
+---
+- name: creats and deletes s3 bucket
+  hosts: localhost
+  tasks: 
+    - name: s3 managment
+      aws_s3:
+        bucket: "{{bucket}}"
+        mode: "{{mode}}"
