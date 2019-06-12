@@ -1,5 +1,5 @@
 ---
-- name: Create an s3 bcuket
+- name: Internet gate way
   hosts: localhost 
   vars_files:
     - var_igw
