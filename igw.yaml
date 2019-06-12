@@ -1,0 +1,4 @@
+ec2_vpc_igw:
+  vpc_id: "{{vpc_id}}"
+  state: present
+register: igw
