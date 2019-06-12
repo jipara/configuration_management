@@ -1,5 +1,5 @@
 ---
-- name: Delete an s3 bcuket
+- name: Delete an s3 bucket
   hosts: localhost 
   tasks:
     - name: Delete an s3 bucket
