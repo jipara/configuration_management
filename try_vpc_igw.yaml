@@ -1,0 +1,23 @@
+---
+- name: Creates VPC
+  hosts: localhost
+  vars_files:
+    - dev_vars
+  tasks:
+    - ec2_vpc_net:
+        name: "{{ name }}"
+        state: present
+        cidr_block: "{{ cidr_block }}"
+        resource_tags: { "Environment":"Development" }
+        region: "{{ region }}"
+
+- name: Create an s3 bcuket
+  hosts: localhost 
+  vars_files:
+    - var_igw
+  tasks:
+    - name: Create internet gate way
+      ec2_vpc_igw:
+        vpc_id: "{{vpc_id}}"
+        state: present
+      register: igw
