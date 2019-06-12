@@ -5,6 +5,6 @@
     - name: IAM user add with password (console access) 
       iam:
         iam_type: user
-        name: "{{name}}"                    
+        name: "{{ name }}"                    
         state: present                      
-        password: "{{password}}"            
+        password: "{{ password }}"            
