@@ -4,7 +4,7 @@
   tasks:
     - name: Route53 A Record
       route53: 
-        state: "{{present}}"
+        state: "{{state}}"
         zone: "{{zone}}"
         record: "{{record}}"
         type: A
